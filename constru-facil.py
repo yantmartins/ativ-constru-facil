@@ -5,16 +5,16 @@ comissoes = {}
 
 def salvar_relatorio():
     linhas = []
-    linhas.append("RELATÓRIO DE VENDAS - LOJA CONSTRUÇÃO FÁCIL\n")
+    linhas.append("RELATÓRIO Das VENDAS - LOJA CONSTRUÇÃO FÁCIL\n")
     linhas.append("-" * 50 + "\n")
 
-    linhas.append("\nVENDAS REALIZADAS:\n")
+    linhas.append("\nVENDAS FeitAS:\n")
     for v in vendas:
         linha = (f"{v['produto']} | {v['quantidade']} un | R${v['valor_total']:.2f} | "
                  f"Vendedor: {v['vendedor']} | Pagamento: {v['forma_pagamento']}\n")
         linhas.append(linha)
 
-    linhas.append("\nCOMISSÕES POR VENDEDOR:\n")
+    linhas.append("\nCOMISSÕES do VENDEDOR:\n")
     for nome, valor in comissoes.items():
         linha = f"{nome}: R${valor:.2f}\n"
         linhas.append(linha)
